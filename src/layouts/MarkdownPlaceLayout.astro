@@ -1,0 +1,41 @@
+---
+import MasonryGrid from '@/components/custom/MasonryGrid';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={`${frontmatter.title} - Visit Tidung`}>
+  <div class="h-[400px]">
+    <Image
+      src={frontmatter.featuredImage}
+      alt={frontmatter.title}
+      class="object-cover w-full h-full"
+    />
+  </div>
+  <article class="prose prose-lg dark:prose-invert mx-auto mt-10 px-5 md:px-0">
+    <h1 class="font-[Karimun] text-6xl text-center text-primary not-prose">
+      {frontmatter.title}
+    </h1>
+    <div class="flex justify-center">
+      <Image
+        src={frontmatter.featuredImage}
+        alt={frontmatter.title}
+        class="rounded-lg mb-2 mt-0 md:min-w-[700px]"
+      />
+    </div>
+    <slot />
+    {
+      frontmatter.photos && frontmatter.photos.length > 0 && (
+        <h2>Galeri {frontmatter.title}</h2>
+      )
+    }
+  </article>
+  <div class="max-w-6xl mx-auto mt-8 mb-24 px-5 xl:px-0">
+    {
+      frontmatter.photos && frontmatter.photos.length > 0 && (
+        <MasonryGrid images={frontmatter.photos} title={frontmatter.title} />
+      )
+    }
+  </div>
+</BaseLayout>

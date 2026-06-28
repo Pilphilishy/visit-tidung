@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1,
+    "name": "Kedai Mamari",
+    "lat": -5.797364,
+    "lng": 106.49334,
+    "products": [
+      {
+        "id": 1,
+        "name": "Mie Level",
+        "price": "-"
+      },
+      {
+        "id": 2,
+        "name": "Ayam Richeese",
+        "price": "-"
+      },
+      {
+        "id": 3,
+        "name": "Ayam Spicy",
+        "price": "-"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Kedai Ning Mira",
+    "lat": -5.797505,
+    "lng": 106.493566,
+    "products": [
+      {
+        "id": 1,
+        "name": "Ayam Bakar",
+        "price": "20k"
+      },
+      {
+        "id": 2,
+        "name": "Ayam Bakar + Nasi",
+        "price": "25k"
+      },
+      {
+        "id": 3,
+        "name": "Nasi Goreng",
+        "price": "15k"
+      },
+      {
+        "id": 4,
+        "name": "Kwetiau",
+        "price": "15k"
+      },
+      {
+        "id": 5,
+        "name": "Mie Tek-tek",
+        "price": "15k"
+      },
+      {
+        "id": 6,
+        "name": "Ayam Penyet",
+        "price": "20k"
+      },
+      {
+        "id": 7,
+        "name": "Tea Jus",
+        "price": "2k"
+      },
+      {
+        "id": 8,
+        "name": "Aneka Kopi",
+        "price": "5k"
+      },
+      {
+        "id": 9,
+        "name": "Jajanan Snack",
+        "price": "1—3k"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mustika Jaya",
+    "lat": -5.797903,
+    "lng": 106.494674,
+    "products": [
+      {
+        "id": 1,
+        "name": "Ikan Asin 1 Pack",
+        "price": "10k"
+      },
+      {
+        "id": 2,
+        "name": "Ikan Asin 1 Kg",
+        "price": "50k"
+      },
+      {
+        "id": 3,
+        "name": "Rumput Laut",
+        "price": "10k"
+      },
+      {
+        "id": 4,
+        "name": "Rumput Laut 1 Kg",
+        "price": "60k"
+      },
+      {
+        "id": 5,
+        "name": "Kerupuk 1 Kg",
+        "price": "50k"
+      },
+      {
+        "id": 6,
+        "name": "Kopi",
+        "price": "5k"
+      },
+      {
+        "id": 7,
+        "name": "Es Aneka Rasa",
+        "price": "2k"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Jajanan Wedera",
+    "lat": -5.797986,
+    "lng": 106.494931,
+    "products": [
+      {
+        "id": 1,
+        "name": "Seblak Prasmanan",
+        "price": "15k"
+      },
+      {
+        "id": 2,
+        "name": "Es Buah",
+        "price": "12k"
+      },
+      {
+        "id": 3,
+        "name": "Jus Buah",
+        "price": "7-8k"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Faiz Bakery",
+    "lat": -5.798059,
+    "lng": 106.495098,
+    "products": [
+      {
+        "id": 1,
+        "name": "Kebab",
+        "price": "15k"
+      },
+      {
+        "id": 2,
+        "name": "Thai Tea",
+        "price": "8k"
+      },
+      {
+        "id": 3,
+        "name": "Roti Bakar",
+        "price": "5k"
+      },
+      {
+        "id": 4,
+        "name": "Burger",
+        "price": "15k"
+      },
+      {
+        "id": 5,
+        "name": "Pop Ice",
+        "price": "5k"
+      },
+      {
+        "id": 6,
+        "name": "Teh Poci",
+        "price": "5k"
+      },
+      {
+        "id": 7,
+        "name": "Pizza",
+        "price": "35-40k"
+      },
+      {
+        "id": 8,
+        "name": "Donat",
+        "price": "22k"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Kedai Rahma",
+    "lat": -5.798095,
+    "lng": 106.495204,
+    "products": [
+      {
+        "id": 1,
+        "name": "Cumi",
+        "price": "40k"
+      },
+      {
+        "id": 2,
+        "name": "Ikan 1 Ons",
+        "price": "10k"
+      },
+      {
+        "id": 3,
+        "name": "Ayam Bakar Dada",
+        "price": "20k"
+      },
+      {
+        "id": 4,
+        "name": "Ayam Bakar Paha",
+        "price": "18k"
+      },
+      {
+        "id": 5,
+        "name": "Ayam Goreng Dada",
+        "price": "20k"
+      },
+      {
+        "id": 6,
+        "name": "Ayam Goreng Paha",
+        "price": "18k"
+      },
+      {
+        "id": 7,
+        "name": "Dengan Nasi",
+        "price": "Tambah 5k"
+      },
+      {
+        "id": 8,
+        "name": "Es Teh",
+        "price": "5k"
+      },
+      {
+        "id": 9,
+        "name": "Es Jeruk",
+        "price": "5k"
+      },
+      {
+        "id": 10,
+        "name": "Good Day",
+        "price": "5k"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Warung Nasgor Bang Bewok",
+    "price": "Rp10.000 - Rp20.000",
+    "operational": "08.00 - 22.00",
+    "facility": "ESSSS",
+    "lat": -5.798291,
+    "lng": 106.495998,
+    "products": [
+      {
+        "id": 1,
+        "name": "Nasi Goreng",
+        "price": "15-17k"
+      },
+      {
+        "id": 2,
+        "name": "Pecel Ayam",
+        "price": "22,25,27k"
+      },
+      {
+        "id": 3,
+        "name": "Mie Tek-tek",
+        "price": "15k"
+      },
+      {
+        "id": 4,
+        "name": "Mie Tiau",
+        "price": "15k"
+      },
+      {
+        "id": 5,
+        "name": "Mie Rebus",
+        "price": "15k"
+      },
+      {
+        "id": 6,
+        "name": "Jajanan Snack",
+        "price": "2-3k"
+      },
+      {
+        "id": 7,
+        "name": "Jas Jus",
+        "price": "2k"
+      },
+      {
+        "id": 8,
+        "name": "Kopi",
+        "price": "5k"
+      },
+      {
+        "id": 9,
+        "name": "Beng-beng",
+        "price": "5-6k"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Kedai Sahabat",
+    "lat": -5.798542,
+    "lng": 106.497032,
+    "products": [
+      {
+        "id": 1,
+        "name": "Mie Ayam",
+        "price": "13-15k"
+      },
+      {
+        "id": 2,
+        "name": "Mie Ayam Bakso Jumbo",
+        "price": "28k"
+      },
+      {
+        "id": 3,
+        "name": "Soto Ayam",
+        "price": "15k"
+      },
+      {
+        "id": 4,
+        "name": "Nasi Goreng",
+        "price": "15k"
+      },
+      {
+        "id": 5,
+        "name": "Seblak",
+        "price": "15k"
+      },
+      {
+        "id": 6,
+        "name": "Mie Tek-tek",
+        "price": "15k"
+      },
+      {
+        "id": 7,
+        "name": "Kwetiau",
+        "price": "15k"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Nila Bakso",
+    "lat": -5.797691,
+    "lng": 106.496697,
+    "products": [
+      { "id": 1, "name": "Bakso", "price": "10k" },
+      { "id": 2, "name": "Mie", "price": "5k" },
+      { "id": 3, "name": "Mie Ayam", "price": "12k" },
+      { "id": 4, "name": "Tea Jus", "price": "2k" },
+      { "id": 5, "name": "Good Day", "price": "5k" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kedai Aliando",
+    "lat": -5.797394,
+    "lng": 106.494993,
+    "products": [
+      { "id": 1, "name": "Teh Poci", "price": "5k" },
+      { "id": 2, "name": "Cappucino Cincau", "price": "5k" },
+      { "id": 3, "name": "Seblak", "price": "15k" },
+      { "id": 4, "name": "Takoyaki", "price": "10k" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Kedai Bu Dipa",
+    "lat": -5.797936,
+    "lng": 106.496078,
+    "products": [
+      { "id": 1, "name": "Tekwan", "price": "12k" },
+      { "id": 2, "name": "Bakso Daging", "price": "12-15k" },
+      { "id": 3, "name": "Good Day", "price": "5k" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Warung Aisyah",
+    "lat": -5.798018,
+    "lng": 106.496132,
+    "products": [
+      { "id": 1, "name": "Donat", "price": "2,5k" },
+      { "id": 2, "name": "Pukcue", "price": "2,5k" },
+      { "id": 3, "name": "Roti Goreng", "price": "2,5k" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Warung Syakila Syamil",
+    "lat": -5.797019,
+    "lng": 106.493692,
+    "products": [
+      { "id": 1, "name": "Es Thai Tea", "price": "6k/8k" },
+      { "id": 2, "name": "Green Tea", "price": "6k/8k" },
+      { "id": 3, "name": "Es Teh Gopek", "price": "5k" },
+      { "id": 4, "name": "Es Teh Sosro", "price": "5k" },
+      { "id": 5, "name": "Es Cokelat", "price": "6k/8k" },
+      { "id": 6, "name": "Es Jeruk", "price": "5k/8k" },
+      { "id": 7, "name": "Es Tea Jus, Marimas", "price": "2k" },
+      { "id": 8, "name": "Es Nutrisari", "price": "5k" },
+      { "id": 9, "name": "Sosis Bakar", "price": "2k" },
+      { "id": 10, "name": "Sosis Gede Bakar", "price": "5k" },
+      { "id": 11, "name": "Bakso Bakar", "price": "2k" },
+      { "id": 12, "name": "Kentang Goreng", "price": "6k/10k" },
+      { "id": 13, "name": "Pisang Cokmer Keju", "price": "6k/10k/15k" },
+      { "id": 14, "name": "Pisang Matcha", "price": "6k/10k/15k" },
+      { "id": 15, "name": "Kue Cane", "price": "6k/10k" },
+      { "id": 16, "name": "Robak", "price": "6k/10k" },
+      { "id": 17, "name": "Migor Bakso", "price": "6k" },
+      { "id": 18, "name": "Migor Bakso Telur", "price": "10k/15k" },
+      { "id": 19, "name": "Migor Aceh Bakso Telur", "price": "10k/15k" },
+      { "id": 20, "name": "Migor Rendang Bakso Telur", "price": "15k" },
+      { "id": 21, "name": "Migor Geprek", "price": "15k" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Bakso Putra Solo",
+    "lat": -5.797433,
+    "lng": 106.495051,
+    "products": [
+      { "id": 1, "name": "Bakso Urat", "price": "15k" },
+      { "id": 2, "name": "Bakso Polos", "price": "10k" },
+      { "id": 3, "name": "Bakso Telur", "price": "15k" },
+      { "id": 4, "name": "Bakso Beranak", "price": "25k" },
+      { "id": 5, "name": "Indomie Bakso Polos", "price": "10k" },
+      { "id": 6, "name": "Indomie Bakso Telur", "price": "15k" },
+      { "id": 7, "name": "Indomie Bakso Urat", "price": "15k" },
+      { "id": 8, "name": "Mie Ayam", "price": "12k" },
+      { "id": 9, "name": "Mie Ayam Bakso Polos", "price": "15k" },
+      { "id": 10, "name": "Mie Ayam Bakso Telur", "price": "20k" },
+      { "id": 11, "name": "Mie Ayam Bakso Urat", "price": "18k" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Gorengan Masbro",
+    "lat": -5.80019,
+    "lng": 106.502636,
+    "products": [
+      { "id": 1, "name": "Tahu Crispy", "price": "10k/12 pcs" },
+      { "id": 2, "name": "Jamur", "price": "5k" },
+      { "id": 3, "name": "Singkong", "price": "5k/3 pcs" },
+      { "id": 4, "name": "Tempe", "price": "5k/3 pcs" },
+      { "id": 5, "name": "Pisang", "price": "2k" },
+      { "id": 6, "name": "Otak Otak", "price": "5k/4 pcs" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Warung Dela Hepa",
+    "lat": -5.79949,
+    "lng": 106.501749,
+    "products": [
+      { "id": 1, "name": "Nasi Rames (Sayur & Ikan)", "price": "15k" },
+      { "id": 2, "name": "Gado Gado", "price": "10k, anter 15k" },
+      {
+        "id": 3,
+        "name": "Nasi Uduk",
+        "price": "12k pake telur / 15k pake cumi"
+      },
+      { "id": 4, "name": "Pecel Ayam Dada", "price": "22k" },
+      { "id": 5, "name": "Pecel Ayam Paha", "price": "20k" },
+      { "id": 6, "name": "Bakwan Udang", "price": "5k" },
+      { "id": 7, "name": "Bakwan Teri", "price": "5k" },
+      { "id": 8, "name": "Ketoprak", "price": "10k" },
+      { "id": 9, "name": "Mie Ayam", "price": "15k" },
+      { "id": 10, "name": "Mie Ayam Bakso", "price": "20k" },
+      { "id": 11, "name": "Bakso", "price": "15k" },
+      { "id": 12, "name": "Aneka Minuman", "price": "5k" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Warung Palupi \"Sido Mampir\"",
+    "lat": -5.799125,
+    "lng": 106.499342,
+    "products": [
+      { "id": 1, "name": "Pecel Ayam + Nasi", "price": "25k" },
+      { "id": 2, "name": "Soto Ayam + Nasi", "price": "20k" },
+      { "id": 3, "name": "Pecel Lele + Nasi", "price": "18k" },
+      { "id": 4, "name": "Nasi Goreng", "price": "15k" },
+      { "id": 5, "name": "Nasi Rames (Sayur & Ikan)", "price": "15k" },
+      { "id": 6, "name": "Aneka Gorengan", "price": "2k" },
+      { "id": 7, "name": "Kelapa Muda", "price": "15k" },
+      { "id": 8, "name": "Es Teh Manis", "price": "5k" },
+      { "id": 9, "name": "Teh Manis Gula Batu", "price": "5k" },
+      { "id": 10, "name": "Es Jeruk Peras", "price": "5k" },
+      { "id": 11, "name": "Es Campur", "price": "7k" },
+      { "id": 12, "name": "Es Lumut", "price": "6k" },
+      { "id": 13, "name": "Kopi Panas", "price": "5k" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Warung Nasi Goreng Bang Mursin",
+    "lat": -5.799008,
+    "lng": 106.49907,
+    "products": [
+      { "id": 1, "name": "Mie Tektek", "price": "15k" },
+      { "id": 2, "name": "Nasgor", "price": "15k" },
+      { "id": 3, "name": "Kwetiau", "price": "15k" },
+      { "id": 4, "name": "Pecel Ayam + Nasi", "price": "25k" },
+      { "id": 5, "name": "Pecel Lele", "price": "18k" },
+      { "id": 6, "name": "Aqua", "price": "5k" },
+      { "id": 7, "name": "Teh Botol, Sprit, Fanta", "price": "8k" },
+      { "id": 8, "name": "Es Teh", "price": "5k" },
+      { "id": 9, "name": "Es Jeruk", "price": "5k" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Putra Minang",
+    "lat": -5.798728,
+    "lng": 106.498929,
+    "products": [
+      { "id": 1, "name": "Nasi Rendang Daging Sapi", "price": "30k" },
+      { "id": 2, "name": "Nasi Ayam", "price": "35k" },
+      { "id": 3, "name": "Nasi Sayur", "price": "10k" },
+      { "id": 4, "name": "Nasi Perkedel", "price": "15k" },
+      { "id": 5, "name": "Nasi Ikan Tongkol", "price": "25k" },
+      { "id": 6, "name": "Ikan Tepa", "price": "25k" },
+      { "id": 7, "name": "Ikan Keneke", "price": "20k" },
+      { "id": 8, "name": "Ikan Comok", "price": "15k" },
+      { "id": 9, "name": "Es Teh", "price": "5k" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Warung Gorengan Bu Nursari",
+    "lat": -5.799762,
+    "lng": 106.501134,
+    "products": [
+      { "id": 1, "name": "Gorengan (Tempura)", "price": "1k" },
+      { "id": 2, "name": "Tahu", "price": "2k" },
+      { "id": 3, "name": "Pisang, Molen", "price": "1k" },
+      {
+        "id": 4,
+        "name": "Goodday, Milo, Nutrisari, Dancow, Kopi",
+        "price": "5k"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Warung Sudi Mampir",
+    "lat": -5.799446,
+    "lng": 106.500349,
+    "products": [
+      { "id": 1, "name": "Warteg", "price": "5k" },
+      { "id": 2, "name": "Nasi Sayur (Sop, Sayur Asem)", "price": "10k" },
+      { "id": 3, "name": "Pake Ayam", "price": "8k, 10k" },
+      { "id": 4, "name": "Pake Telur", "price": "5k" },
+      { "id": 5, "name": "Nasi Uduk 1 Porsi Pake Telor", "price": "10k" },
+      { "id": 6, "name": "Nasi Uduk", "price": "5k" },
+      { "id": 7, "name": "Es Kopi", "price": "5k" },
+      { "id": 8, "name": "Es Rasa", "price": "2k" },
+      { "id": 9, "name": "Es Teh", "price": "5k" }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Seblak Prasmanan Nabita",
+    "lat": -5.798991,
+    "lng": 106.500526,
+    "products": [
+      { "id": 1, "name": "Seblak", "price": "10k, 12k, 15k" },
+      { "id": 2, "name": "Ceker Tulang, Seafood", "price": "15k" },
+      { "id": 3, "name": "Mie Sakura", "price": "3k" },
+      { "id": 4, "name": "Telur", "price": "3k" },
+      { "id": 5, "name": "Kerupuk Lidah", "price": "1k/2" },
+      { "id": 6, "name": "Kerupuk Konde Batagor", "price": "1k/5" },
+      { "id": 7, "name": "Telur", "price": "3k" },
+      { "id": 8, "name": "Kwetiau", "price": "1k/2k" },
+      { "id": 9, "name": "Seafood", "price": "2k kecuali Dumping 3k" },
+      { "id": 10, "name": "Sosis Besar", "price": "5k" },
+      { "id": 11, "name": "Ceker", "price": "2k" },
+      { "id": 12, "name": "Tulang", "price": "3k" },
+      { "id": 13, "name": "Kerupuk Kaleng", "price": "2k" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Jajanan Kedai Hibban",
+    "lat": -5.79779,
+    "lng": 106.498262,
+    "products": [
+      { "id": 1, "name": "Lumpia Sayur", "price": "8k" },
+      { "id": 2, "name": "Burger", "price": "15k" },
+      { "id": 3, "name": "Robak", "price": "15k" },
+      { "id": 4, "name": "Seafood Bakar", "price": "5-10k" },
+      { "id": 5, "name": "Sostel", "price": "8k" },
+      { "id": 6, "name": "Es Teler", "price": "15k" },
+      { "id": 7, "name": "Es Jelly Creamy", "price": "15k" },
+      { "id": 8, "name": "Fanta Susu", "price": "8k" },
+      { "id": 9, "name": "Es Poci", "price": "5k" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Nasi Uduk Bu Suharti",
+    "lat": -5.797862,
+    "lng": 106.498377,
+    "products": [{ "id": 1, "name": "Nasi Uduk", "price": "10k" }]
+  },
+  {
+    "id": 25,
+    "name": "Warung Ibu Sopiyah",
+    "lat": -5.799287,
+    "lng": 106.499491,
+    "products": [
+      { "id": 1, "name": "Ikan Asin", "price": "10k" },
+      { "id": 2, "name": "Manisan Rumput Laut", "price": "10k" },
+      { "id": 3, "name": "Krupuk Ikan", "price": "10k" },
+      { "id": 4, "name": "Keripik Sukun", "price": "10k" },
+      { "id": 5, "name": "Dodol Rumput Laut", "price": "10k" }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Nasi Uduk Ibu Mulyadewi",
+    "lat": -5.798803,
+    "lng": 106.498154,
+    "products": [
+      { "id": 1, "name": "Nasi Uduk", "price": "10k" },
+      { "id": 2, "name": "Gorengan", "price": "2k" },
+      { "id": 3, "name": "Ikan", "price": "7k" }
+    ]
+  }
+]

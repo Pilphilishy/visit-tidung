@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { formatDate } from '@/utils';
+import { Image } from 'astro:assets';
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={`${frontmatter.title} - Visit Tidung`}>
+  <section class="py-10 bg-gradient-to-br from-cyan-50 to-blue-50">
+    <div class="container mx-auto px-3 max-w-4xl">
+      <article class="bg-white rounded-xl shadow-lg p-4 pb-10">
+        <div class="mb-8">
+          <div class="relative md:h-96 overflow-hidden rounded-lg">
+            <Image
+              src={frontmatter.featuredImage}
+              alt={frontmatter.title}
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+            >
+            </div>
+          </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+          {frontmatter.title}
+        </h1>
+
+        <div
+          class="flex items-center justify-between text-sm text-gray-500 mb-8"
+        >
+          <div>
+            <span>Oleh {frontmatter.author}</span>
+            <span class="mx-2">•</span>
+            <span>
+              {formatDate(frontmatter.publishedDate)}
+            </span>
+          </div>
+        </div>
+
+        <div class="prose md:prose-lg max-w-none">
+          <slot />
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  article img {
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<script>
+  // Make a link tag in article target blank
+  document.querySelectorAll('article a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+  });
+
+  // Make footnote ref and backref target self
+  document.querySelectorAll('a[data-footnote-backref]').forEach((el) => {
+    el.setAttribute('target', '_self');
+  });
+
+  document.querySelectorAll('a[data-footnote-ref]').forEach((el) => {
+    el.setAttribute('target', '_self');
+  });
+</script>

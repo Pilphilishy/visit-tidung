@@ -1,0 +1,116 @@
+---
+import mendayungSeribuLogo from '@/assets/images/mendayung-seribu-logo.svg';
+import MobileMenu from './MobileMenu';
+import Navigation from './Navigation';
+---
+
+<nav
+  class="py-4 sticky top-0 z-50 px-6 transition-all duration-300 ease-in-out"
+  style="border: none !important; outline: none !important;"
+>
+  <div class="flex justify-between items-center">
+    {/* Logo */}
+    <a href="/" class="flex items-center focus:outline-none">
+      <img src={mendayungSeribuLogo.src} class="w-7" />
+      <span class="text-3xl ml-3 font-[Karimun] text-primary-foreground" id="navbar-logo"
+        >Visit Tidung</span
+      >
+    </a>
+
+    <div class="flex gap-4 items-center">
+      {/* Desktop Navigation */}
+      <nav class="hidden lg:block">
+        <Navigation client:load />
+      </nav>
+
+      <MobileMenu client:load />
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Inisialisasi variabel
+  const navbar = document.querySelector('nav');
+  const navClasses = ['bg-white', 'shadow-md'];
+  const navbarLogo = document.getElementById('navbar-logo');
+  const navLinks = document.querySelectorAll('.navigation-menu-link');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  
+  // Fungsi untuk mengatur style navbar
+  function setNavbarStyle(isScrolled) {
+    if (isScrolled) {
+      navbar.classList.add(...navClasses);
+      navbarLogo.classList.remove('text-primary-foreground');
+      navbarLogo.classList.add('text-primary');
+      navLinks.forEach(link => {
+        link.classList.remove('text-primary-foreground');
+        link.classList.add('text-primary');
+      });
+      dropdownItems.forEach(item => {
+        item.classList.remove('text-primary-foreground');
+        item.classList.add('text-gray-800');
+      });
+    } else {
+      navbar.classList.remove(...navClasses);
+      navbarLogo.classList.remove('text-primary');
+      navbarLogo.classList.add('text-primary-foreground');
+      navLinks.forEach(link => {
+        link.classList.remove('text-primary');
+        link.classList.add('text-primary-foreground');
+      });
+      dropdownItems.forEach(item => {
+        item.classList.remove('text-gray-800');
+        item.classList.add('text-primary-foreground');
+      });
+    }
+  }
+
+  // Cek apakah di homepage
+  if (window.location.pathname === '/') {
+    // Set initial state
+    setNavbarStyle(window.scrollY > 100);
+    
+    // Tambahkan event listener untuk scroll
+    window.addEventListener('scroll', () => {
+      setNavbarStyle(window.scrollY > 100);
+    });
+  } else {
+    // Untuk halaman lain, langsung set style scrolled
+    setNavbarStyle(true);
+  }
+
+  // Tangani hash di URL untuk scroll otomatis
+  window.addEventListener('load', () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+    }
+  });
+  
+  // Tangani klik pada menu "Tempat Wisata" untuk scroll ke section places
+  document.querySelectorAll('a[href="#places"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const placesSection = document.getElementById('places');
+      if (placesSection) {
+        placesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  
+  // Tangani klik pada menu "Artikel" untuk scroll ke section articles
+  document.querySelectorAll('a[href="#articles"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const articlesSection = document.getElementById('articles');
+      if (articlesSection) {
+        articlesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,130 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Makam1 from '@/assets/images/history/makam-pulau-tidung.jpeg';
+import Makam2 from '@/assets/images/history/makam raja.jpg';
+import Jembatan from '@/assets/images/places/jembatan-cinta.jpg';
+import PageHeading from '@/components/custom/PageHeading';
+import PageSubHeading from '@/components/custom/PageSubHeading';
+
+const pageTitle = 'Sejarah Pulau Tidung';
+---
+
+<BaseLayout {pageTitle}>
+  <section class="bg-gradient-to-r from-slate-50 to-blue-50 py-16 px-3">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <PageHeading>Sejarah dan Budaya Pulau Tidung</PageHeading>
+        <PageSubHeading>
+          Temukan warisan sejarah maritim dan budaya yang membentuk identitas
+          Pulau Tidung
+        </PageSubHeading>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Asal Usul Tidung</h2>
+        <div class="md:flex md:items-start md:gap-8">
+          <div class="md:w-1/3 w-full mb-16 md:mb-0 flex-shrink-0 flex flex-col">
+            <div class="relative w-full h-64 md:h-auto aspect-[4/3]">
+              <img
+                src={Makam1.src}
+                alt="Makam Pulau Tidung"
+                class="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+          </div>
+          <div class="md:w-2/3 w-full">
+            <p>
+              Pulau Tidung terdiri dari 2 bagian pulau, yaitu Pulau Tidung Besar
+              dan Pulau Tidung Kecil. Menurut sumber cerita yang ada, pulau yang
+              pertama kali dihuni adalah Pulau Tidung Kecil dan dengan
+              bertambahnya tahun demi tahun, penduduk semakin bertambah dan
+              barulah masyarakat berpindah ke Pulau Tidung Besar. Pulau ini
+              sejak dahulu menjadi tempat persinggahan nelayan dan pedagang yang
+              mencari perlindungan dari badai di Laut Jawa.
+            </p>
+            <p>
+              Pulau Tidung memiliki peran penting di masa kolonial sebagai salah
+              satu tempat pengasingan. Konon, seorang bangsawan dari Kerajaan
+              Tidung, Kalimantan, diasingkan ke pulau ini oleh penjajah Belanda.
+              Dari nama inilah, Pulau Tidung mendapatkan identitasnya. Hingga
+              kini, jejak sejarah tersebut masih hidup dalam cerita rakyat dan
+              berbagai peninggalan yang ditemukan di pulau ini.
+            </p>
+          </div>
+        </div>
+
+        <h2>Peran dalam Jalur Perdagangan</h2>
+        <p>
+          Sejak abad ke-16, Pulau Tidung menjadi bagian penting dari rute
+          perdagangan maritim Nusantara. Kapal-kapal dari Jawa, Sumatra,
+          Kalimantan, dan bahkan dari negara tetangga sering singgah di sini
+          untuk mengambil air tawar, memperbaiki kapal, dan beristirahat.
+        </p>
+
+        <h2>Warisan Budaya Betawi</h2>
+        <p>
+          Penduduk Pulau Tidung Berasal dari bermacam-macam suku diantaranya
+          suku Bugis, Mandar, Kalimantan Timur, Kalimantan Barat, Sumatra,
+          Sumbawa dan Banten bahkan ada dari Batavia. kala itu agama yang dianut
+          oleh para penduduk setempat dan pendatang adalah agama Islam, dan pada
+          saat itu pula gunung Krakatau meletus sedang di Pulau Tidung sudah
+          dihuni oleh banyak penduduk terutama dari keturunan para pendatang.
+        </p>
+
+        <h2>Perkembangan Modern</h2>
+        <p>
+          Pada saat ini, Pulau Tidung dikenal sebagai destinasi wisata yang
+          menawarkan keindahan alam, budaya, dan sejarah yang kaya. Dengan
+          pantai yang indah, terumbu karang yang menakjubkan, serta kehidupan
+          bawah laut yang beragam, pulau ini menjadi magnet bagi wisatawan.
+          Dengan Jembatan Cinta menjadi ikon utama pulau ini, menarik banyak
+          pengunjung untuk datang dan menikmati keindahan alamnya. Makam Raja
+          Pandita adalah salah satu situs bersejarah yang terletak di pulau ini,
+          yang menjadi bukti akan keberadaan budaya dan sejarah yang kaya.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+          <div class="flex flex-col items-center">
+            <div
+              class="flex items-center justify-center w-full h-72 md:h-96 rounded-xl overflow-hidden bg-slate-100"
+            >
+              <img
+                src={Jembatan.src}
+                alt="Jembatan Cinta"
+                class="object-contain w-full h-full rounded-xl"
+              />
+            </div>
+            <span class="mt-3 text-center text-sm text-slate-600"
+              >Jembatan Cinta – Ikon Pulau Tidung yang menghubungkan Tidung
+              Besar dan Tidung Kecil</span
+            >
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="flex items-center justify-center w-full h-72 md:h-96 rounded-xl overflow-hidden bg-slate-100"
+            >
+              <img
+                src={Makam2.src}
+                alt="Makam Raja Pandita"
+                class="object-contain w-full h-full rounded-xl"
+              />
+            </div>
+            <span class="mt-3 text-center text-sm text-slate-600"
+              >Makam Raja Pandita – Situs bersejarah peninggalan masa lalu Pulau
+              Tidung</span
+            >
+          </div>
+        </div>
+
+        <h2>Konservasi dan Masa Depan</h2>
+        <p>
+          Saat ini, Pulau Tidung menjadi pelopor ekonomi biru di Indonesia
+          dengan memadukan pariwisata berkelanjutan dan konservasi laut.
+          Berbagai program pelestarian terumbu karang, hutan mangrove, dan
+          budaya lokal terus dikembangkan untuk menjaga warisan pulau ini untuk
+          generasi mendatang.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

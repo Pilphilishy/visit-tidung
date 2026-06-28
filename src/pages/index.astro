@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Mouse } from 'lucide-react';
+import { getCollection } from 'astro:content';
+import CulinarySection from '@/components/custom/CulinarySection';
+import HistorySection from '@/components/custom/HistorySection';
+import MapsSection from '@/components/custom/MapsSection';
+import ArticleSection from '@/components/custom/ArticleSection';
+import BookletSection from '@/components/custom/BookletSection';
+import PlacesSection from '@/components/custom/PlacesSection';
+import VideoSection from '@/components/custom/VideoSection';
+import VideoTidungKecilSection from '@/components/custom/VideoTidungKecilSection';
+
+// Ambil data tempat wisata
+const places = await getCollection('places');
+// Ambil 3 tempat pertama untuk ditampilkan di homepage
+const featuredPlaces = places.slice(0, 3);
+featuredPlaces.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const traditionalFoods = await getCollection('traditionalFoods');
+const featuredTraditionalFoods = traditionalFoods.slice(0, 3);
+
+const articles = await getCollection('articles');
+articles.sort((a, b) => {
+  return b.data.publishedDate.getTime() - a.data.publishedDate.getTime();
+});
+const featuredArticles = articles.slice(0, 5);
+// sort
+---
+
+<BaseLayout pageTitle="Visit Tidung">
+  <!-- Hero Section -->
+  <header class="relative w-full h-[calc(100vh-68px)] overflow-hidden">
+    <!-- Video Background -->
+    <div class="fixed top-0 left-0 w-full h-screen -z-10">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-full object-cover"
+        id="hero-video"
+      >
+        <source src="/videos/videotron-overlay.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-20 text-primary-foreground h-full flex items-center">
+      <div class="md:ml-32 md:max-w-xl px-3 md:px-0 -mt-28">
+        <h1
+          class="text-6xl md:text-8xl font-[Karimun] text-center md:text-left"
+        >
+          Pulau Tidung
+        </h1>
+        <p class="text-lg -mt-3 text-center md:text-left">
+          Surga ketenangan dan keindahan, Pulau Tidung menawarkan pengalaman
+          menyegarkan bagi para pelancong yang ingin melepaskan penat dari
+          rutinitas sehari-hari.
+        </p>
+      </div>
+      <div class="absolute bottom-5 left-1/2 animate-bounce"><Mouse /></div>
+    </div>
+  </header>
+
+  <div class="bg-background">
+    <VideoSection client:load />
+
+    <!-- <PlacesSection client:load /> -->
+    <PlacesSection client:load places={featuredPlaces} />
+
+    <VideoTidungKecilSection client:load />
+
+    <!-- Culinary Section -->
+    <CulinarySection client:load traditionalFoods={featuredTraditionalFoods} />
+
+    <!-- History Section -->
+    <HistorySection client:load />
+
+    <!-- Maps Section -->
+    <MapsSection client:load />
+
+    <!-- Article Section -->
+    <ArticleSection client:load articles={featuredArticles} />
+
+    <!-- Booklets Section -->
+    <BookletSection client:load />
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight) {
+      document.getElementById('hero-video').classList.add('hidden');
+    } else {
+      document.getElementById('hero-video').classList.remove('hidden');
+    }
+  });
+</script>

@@ -1,0 +1,198 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Map from '@/components/custom/Map';
+import { getCollection } from 'astro:content';
+import PageHeading from '@/components/custom/PageHeading';
+import PageSubHeading from '@/components/custom/PageSubHeading';
+import { bookletsCulinaryAndLodgings } from '@/data/booklets';
+import BookletCard from '@/components/custom/BookletCard';
+import { Image } from 'astro:assets';
+
+const pageTitle = 'Peta Pulau Tidung';
+
+const culinary = await getCollection('culinary');
+const lodgings = await getCollection('lodgings');
+
+// PETA
+import mapAdmin from '@/assets/images/maps/PETA PL TIDUNG 22 AGUSTUS 2025.jpg';
+import mapUmkmRw0102 from '@/assets/images/maps/Peta Sebaran Lokasi UMKM Kuliner di RW 01 dan 02.jpg';
+import mapLodgings from '@/assets/images/maps/Peta Sebaran Penginapan Kelurahan Pulau Tidung.jpg';
+
+// POSTER INFOGRAFIS
+import posterAirBersih from '@/assets/images/posters/Poster Infografis Pengkajian Sumber Air Bersih.jpg';
+import posterDiabetes from '@/assets/images/posters/Diabetes Melitus.jpg';
+import posterHipertensi from '@/assets/images/posters/Hipertensi.jpg';
+
+// Data untuk galeri
+const mapImages = [
+  {
+    title: 'Administratif: PETA PL TIDUNG (22 Agustus 2025)',
+    src: mapAdmin,
+    alt: 'Peta administratif Pulau Tidung, tanggal 22 Agustus 2025',
+  },
+  {
+    title: 'Peta Sebaran Lokasi UMKM Kuliner di RW 01 dan 02',
+    src: mapUmkmRw0102,
+    alt: 'Peta sebaran UMKM kuliner di RW 01 dan RW 02',
+  },
+  {
+    title: 'Peta Sebaran Penginapan Kelurahan Pulau Tidung',
+    src: mapLodgings,
+    alt: 'Peta sebaran penginapan di Kelurahan Pulau Tidung',
+  },
+];
+
+const posterImages = [
+  {
+    title: 'Poster Infografis Pengkajian Sumber Air Bersih',
+    src: posterAirBersih,
+    alt: 'Poster infografis pengkajian sumber air bersih di Pulau Tidung',
+  },
+  {
+    title: 'Poster Infografis Diabetes Melitus',
+    src: posterDiabetes,
+    alt: 'Poster infografis edukasi Diabetes Melitus',
+  },
+  {
+    title: 'Poster Infografis Hipertensi',
+    src: posterHipertensi,
+    alt: 'Poster infografis edukasi Hipertensi',
+  },
+];
+---
+
+<BaseLayout {pageTitle}>
+  <section class="bg-gradient-to-br from-cyan-50 to-blue-50 px-3 py-16">
+    <div class="text-center mb-16">
+      <PageHeading>Peta Interaktif Pulau Tidung</PageHeading>
+      <PageSubHeading>
+        Temukan lokasi kuliner UMKM dan penginapan di Pulau Tidung
+      </PageSubHeading>
+    </div>
+
+    <Map client:only culinary={culinary} lodgings={lodgings} />
+
+    {/* ====== GALERI PETA STATIS ====== */}
+    <div class="max-w-6xl mx-auto mt-24">
+      <h2 class="text-4xl font-[Karimun] text-primary text-center mt-28 mb-2">
+        Galeri Peta
+      </h2>
+      <PageSubHeading>
+        Peta administratif dan sebaran UMKM kuliner serta penginapan di Pulau Tidung.
+      </PageSubHeading>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {mapImages.map((item) => (
+          <figure class="group bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden">
+            <a
+              href={item.src.src}
+              target="_blank"
+              rel="noopener"
+              aria-label={`Buka ${item.title} ukuran penuh`}
+              class="block"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                widths={[480, 768, 1280]}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="p-4 flex items-start justify-between gap-3">
+              <span class="text-sm font-medium text-slate-800">{item.title}</span>
+              <div class="shrink-0 flex items-center gap-2">
+                <a
+                  href={item.src.src}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 hover:bg-blue-100"
+                >
+                  Lihat
+                </a>
+                <a
+                  href={item.src.src}
+                  download
+                  class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 hover:bg-emerald-100"
+                >
+                  Unduh
+                </a>
+              </div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+
+    {/* ====== POSTER INFOGRAFIS ====== */}
+    <div class="max-w-6xl mx-auto mt-24">
+      <h2 class="text-4xl font-[Karimun] text-primary text-center mt-28 mb-2">
+        Poster Infografis
+      </h2>
+      <PageSubHeading>        
+        Kumpulan poster edukasi: Sumber Air Bersih, Diabetes Melitus, dan Hipertensi sebaran Pulau Tidung.
+      </PageSubHeading>
+
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {posterImages.map((item) => (
+          <figure class="group bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden">
+            <a
+              href={item.src.src}
+              target="_blank"
+              rel="noopener"
+              aria-label={`Buka ${item.title} ukuran penuh`}
+              class="block"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                widths={[480, 768, 1280]}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="p-4 flex items-start justify-between gap-3">
+              <span class="text-sm font-medium text-slate-800">{item.title}</span>
+              <div class="shrink-0 flex items-center gap-2">
+                <a
+                  href={item.src.src}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 hover:bg-blue-100"
+                >
+                  Lihat
+                </a>
+                <a
+                  href={item.src.src}
+                  download
+                  class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 hover:bg-emerald-100"
+                >
+                  Unduh
+                </a>
+              </div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+
+    {/* ====== CTA BOOKLET ====== */}
+    <h2 class="text-4xl font-[Karimun] text-primary text-center mt-28 mb-2">
+      Tertarik untuk Mempelajari UMKM Kuliner dan Penginapan Lebih Lanjut<span class="font-sans font-bold text-2xl">?</span>
+    </h2>
+    <PageSubHeading>
+      Temukan informasi lengkap mengenai UMKM kuliner dan penginapan di
+      Pulau Tidung melalui booklet ini
+    </PageSubHeading>
+    <div class="max-w-4xl grid sm:grid-cols-2 mx-auto gap-8 px-2">
+      {
+        bookletsCulinaryAndLodgings.map((booklet) => (
+          <BookletCard booklet={booklet} />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

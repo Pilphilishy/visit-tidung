@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "name": "Puk Cue",
+    "featuredImage": "../assets/images/traditional-foods/puk-cue.jpg",
+    "images": [
+      "../assets/images/traditional-foods/puk-cue-01.jpg",
+      "../assets/images/traditional-foods/puk-cue-02.png",
+      "../assets/images/traditional-foods/puk-cue-03.png"
+    ],
+    "definition": "Puk Cue merupakan kue khas pulau tidung yang terbuat dari ikan dan bertekstur kenyal dan padat. Kerupuk cue dapat disajikan dengan dikukus ataupun digoreng dalam bentuk bulat, gelondong (kukus), atau potongan yang dimakan bersama saus kacang.",
+    "ingredients": "Ikan, tepung sagu dan terigu atau tepung tapioka, bumbu dapur, dan saus kacang.",
+    "philosophy": "Puk cue mirip dengan pempek Palembang, yang menunjukkan adanya keanekaragaman dan adaptasi budaya dari masyarakat Pulau Tidung."
+  },
+  {
+    "id": 2,
+    "name": "Kue Adas",
+    "featuredImage": "../assets/images/traditional-foods/kue-adas.png",
+    "definition": "Nama “adas” sendiri diperkirakan berasal dari aroma khas rempah daun adas (Foeniculum vulgare) yang dahulu digunakan sebagai salah satu bahan campuran atau perisa dalam pembuatannya. Namun, seiring waktu, banyak resep modern yang tidak lagi menggunakan daun adas, tetapi nama tersebut tetap dipertahankan sebagai identitas kuliner lokal.",
+    "ingredients": "Tepung terigu, gula merah, gula pasir, daun pandan, garam, soda kue.",
+    "philosophy": "Kue adas tidak hanya sekadar camilan, tetapi juga mengandung filosofi budaya dan sosial. Bentuknya yang bulat dan padat melambangkan tekad, keutuhan, dan kekompakan, sementara adonannya yang merekat mencerminkan kebersamaan dan solidaritas. Rasa manis dari gula aren menjadi simbol harapan akan hidup yang bahagia, dan taburan wijen menggambarkan rezeki yang melimpah."
+  },
+  {
+    "id": 3,
+    "name": "Kue Janda Mengandang",
+    "featuredImage": "../assets/images/traditional-foods/kue-janda-mengandang.jpg",
+    "images": [
+      "../assets/images/traditional-foods/kue-janda-mengandang-01.jpg"
+    ],
+    "definition": "Kue Janda Mengandang adalah yang memiliki tekstur kenyal dan disajikan dengan siraman air gula merah. Kudapan manis ini dibuat dengan cara dikukus lalu disajikan bersama dengan air gula merah sebagai saus.",
+    "ingredients": "Air, tepung beras, tepung sagu, ampas kelapa, dan gula merah.",
+    "philosophy": "Kue ini melambangkan para istri pelaut ibarat janda-janda yang ditinggal para suaminya. Hal ini didorong dari pemikiran yang mengatakan bahwa sang suami belum dipastikan bisa kembali ke rumahnya."
+  },
+  {
+    "id": 4,
+    "name": "Kue Ular Bulu",
+    "featuredImage": "../assets/images/traditional-foods/kue-ular-bulu.jpg",
+    "images": ["../assets/images/traditional-foods/kue-ular-bulu-01.jpg"],
+    "definition": "Kue ular bulu merupakan kue yang berwarna warni terbuat dari bahan dasar tepung beras dan tepung sagu. Kue ini disajikan dalam bentuk potongan kecil disertai kelapa parut di atasnya.",
+    "ingredients": "Air, tepung beras, tepung sagu, kelapa, gula putih, dan pasta kue.",
+    "creation": "Pembuatan kue ular bulu dilakukan dengan membuat adonan dari tepung beras dan air panas,  tepung sagu, dan gula putih. Adonan yang sudah jadi kemudian dicetak dan diberi pasta kue sesuai selera, kemudian dikukus sampai matang dan harum."
+  },
+  {
+    "id": 5,
+    "name": "Kue Jejongkong",
+    "featuredImage": "../assets/images/traditional-foods/kue-jejongkong.png",
+    "images": ["../assets/images/traditional-foods/kue-jejongkong-01.png"],
+    "definition": "Kue jongkong adalah salah satu cemilan tradisional yang memiliki teksturnya lembut, dan rasanya manis. Kue ini disertai dengan siraman saus gula merah dan sensasi wangi pandan.",
+    "ingredients": "Tepung beras, santan, pandan, dan gula merah.",
+    "philosophy": "Dalam bahasa Melayu dan Betawi, jongkong merujuk pada perahu kecil yang digunakan menyusuri sungai. Makanan jongkong dibungkus dengan daun pisang dan dibentuk lonjong memanjang, mirip badan perahu."
+  },
+  {
+    "id": 6,
+    "name": "Aneka Olahan Laut",
+    "featuredImage": "../assets/images/traditional-foods/aneka-olahan-laut.jpg",
+    "images": ["../assets/images/traditional-foods/aneka-olahan-laut-01.jpg"],
+    "productName": "Kerupuk ikan, tangkue (dodol rumput laut), manisan cermai, stik ikan, stik cumi-cumi.",
+    "ingredients": "Ikan, rumput laut, buah cermai, cumi-cumi, tepung sagu."
+  },
+  {
+    "id": 7,
+    "name": "Pacar Cina",
+    "featuredImage": "../assets/images/traditional-foods/pacar-cina.png",
+    "images": ["../assets/images/traditional-foods/pacar-cina-01.png"],
+    "definition": "Pacar cina merupakan makanan yang terbuat dari tepung tapioka, berbentuk butiran kecil-kecil setengah transparan berwarna merah dan putih.",
+    "ingredients": "Tepung tapioka, air panas, garam, pewarna makanan.",
+    "philosophy": "Kudapan manis ini berawal dari makanan yang dijual oleh pendatang dari Tiongkok. Rasanya yang manis dan nempel di lidah layaknya seorang kekasih menjadikan makanan ini dinamakan pacar cina."
+  },
+  {
+    "id": 8,
+    "name": "Apem Cukit",
+    "featuredImage": "../assets/images/traditional-foods/apem-cukit.png",
+    "images": [
+      "../assets/images/traditional-foods/apem-cukit-01.png",
+      "../assets/images/traditional-foods/apem-cukit-02.png"
+    ],
+    "definition": "Kue apem cukit juga sering disebut dengan apem putih di masyarakat. Nama Apem Putih merujuk pada penampilan fisiknya yang didominasi warna putih bersih, hasil dari adonan tepung beras dan santan tanpa tambahan pewarna. Warna ini juga memberi kesan sederhana namun bersih dan menggugah selera.",
+    "ingredients": "Tepung beras, pasta pandan, gula halus, santan, garam.",
+    "philosophy": "Kue “apem” berasal dari bahasa Arab yaitu \"afuan\" atau \"afuwwun\" yang berarti pengampunan. Namun, masyarakat Jawa menyebutnya dengan apem sebagai simbol pengampunan dari kesalahan."
+  },
+  {
+    "id": 9,
+    "name": "Klepon",
+    "featuredImage": "../assets/images/traditional-foods/klepon.png",
+    "definition": "Klepon berbentuk bulat kecil, berwarna hijau, berisi gula merah cair, dan dilapisi kelapa parut. Jajanan ini biasanya disajikan dalam pincuk daun pisang.",
+    "ingredients": "Tepung ketan, air daun pandan atau suji untuk pewarna alami, gula merah sebagai isian, dan kelapa parut untuk taburan.",
+    "philosophy": "Klepon melambangkan kesederhanaan dan kebahagiaan yang tersembunyi—dari luar tampak biasa, tapi saat digigit, manisnya meledak di dalam mulut, mengingatkan bahwa kebahagiaan sering tersembunyi di balik kesederhanaan."
+  },
+  {
+    "id": 10,
+    "name": "Laksa",
+    "featuredImage": "../assets/images/traditional-foods/laksa.jpg",
+    "definition": "Laksa merupakan makanan khas yang disajikan dengan bihun dan kuah pedas dengan berbagai aroma rempah. Kuliner ini biasa disajikan saat pesta dan tradisi hantaran makanan.",
+    "ingredients": "Bahan adonan: tepung beras, sagu, garam, air. Bahan kuah: kacang hijau, bihun, santan, garam, cabe rawit, kunyit, kemiri, lada, ketumbar, jahe , lengkuas, bawang merah, bawang putih, sere, ikan tongkol panggang",
+    "philosophy": "Laksa merupakan hasil akulturasi budaya Tionghoa dan Melayu, khususnya Asia Tenggara. Para pedagang Tionghoa telah bermukim di Indonesia sejak abad ke-16 dan memperkenalkan mie berkuah pedas, yang lambat laun berkembang menjadi makanan laksa."
+  }
+]

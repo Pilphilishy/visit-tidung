@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Button } from '@/components/ui/button';
+---
+
+<BaseLayout>
+  <div
+    class="h-[calc(100vh-200px)] flex flex-col gap-4 justify-center items-center"
+  >
+    <h1 class="font-bold text-2xl text-center">
+      404 - Halaman tidak ditemukan
+    </h1>
+    <a href="/">
+      <Button
+        variant="default"
+        className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400 hover:from-blue-600 hover:via-cyan-500 hover:to-green-500 text-white font-semibold rounded-lg transition-all duration-200 group shadow-lg"
+      >
+        Kembali ke Beranda
+      </Button>
+    </a>
+  </div>
+</BaseLayout>

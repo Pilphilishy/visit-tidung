@@ -1,0 +1,132 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components/ui/card';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { generateExcerpt, formatDate } from '@/utils';
+import PageHeading from '@/components/custom/PageHeading';
+import PageSubHeading from '@/components/custom/PageSubHeading';
+
+// const articles = await getCollection('articles');
+const pageTitle = 'Artikel Pulau Tidung';
+
+// Urutkan artikel berdasarkan tanggal terbaru
+const articles = await getCollection('articles');
+articles.sort((a, b) => {
+  return b.data.publishedDate.getTime() - a.data.publishedDate.getTime();
+});
+---
+
+<BaseLayout {pageTitle}>
+  <section class="py-16 bg-gradient-to-br from-cyan-50 to-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <PageHeading>Artikel Pulau Tidung</PageHeading>
+        <PageSubHeading>
+          Temukan panduan perjalanan, tips, dan cerita inspiratif tentang Pulau
+          Tidung
+        </PageSubHeading>
+      </div>
+
+      <div class="grid gap-6 mt-4 max-w-4xl mx-auto">
+        {
+          articles.map((article) => (
+            <a href={`/articles/${article.id}`} class="group">
+              <Card className=" px-0">
+                <CardHeader className="flex flex-col sm:flex-row gap-4 px-4 items-stretch">
+                  <div class="sm:max-w-64">
+                    <Image
+                      src={article.data.featuredImage}
+                      alt={article.data.title}
+                      class="rounded-lg h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg leading-6 mb-2">
+                      {article.data.title}
+                    </CardTitle>
+                    <CardDescription>
+                      {generateExcerpt(article.body || article.data.title)}
+                    </CardDescription>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-3">
+                      <div>
+                        <span>Oleh {article.data.author}</span>
+                        <span class="mx-2">•</span>
+                        <span>{formatDate(article.data.publishedDate)}</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-end mt-3">
+                    <div class="text-blue-50 font-medium text-sm px-4 py-2 rounded-full transition-colors duration-200 shadow-sm bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 hover:shadow-md">
+                      Baca selengkapnya →
+                    </div>
+
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            </a>
+          ))
+        }
+      </div>
+
+      <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedArticles.map((article) => {
+        // Tangani tanggal sebagai Date object
+        const articleDate = article.data.date instanceof Date ? 
+                            article.data.date : 
+                            new Date(article.data.date);
+        
+        return (
+          <a 
+            href={`/articles/${article.slug}`} 
+            class="group block h-full"
+          >
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div class="relative h-48 overflow-hidden">
+                  <img
+                    src={article.data.image}
+                    alt={article.data.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+                
+                <div class="p-6 flex-grow flex flex-col">
+                  <h3 class="text-xl font-bold text-blue-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                    {article.data.title}
+                  </h3>
+                  <p class="text-gray-600 mb-4 line-clamp-3 flex-grow">
+                    {article.data.excerpt}
+                  </p>
+                  
+                  <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>{article.data.author}</span>
+                    <span>{article.data.readTime}</span>
+                  </div>
+                  
+                  <div class="flex items-center justify-between mt-3">
+                    <span class="text-sm text-gray-500">
+                      {articleDate.toLocaleDateString('id-ID', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}
+                    </span>
+                    <span class="text-blue-600 group-hover:text-cyan-600 font-medium transition-colors">
+                      Baca Selengkapnya
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div> -->
+    </div>
+  </section>
+</BaseLayout>

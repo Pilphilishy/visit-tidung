@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+import TraditionalFoodCollapsible from '@/components/custom/TraditionalFoodCollapsible';
+import PageHeading from '@/components/custom/PageHeading';
+import PageSubHeading from '@/components/custom/PageSubHeading';
+
+const pageTitle = 'Kuliner Khas Pulau Tidung';
+
+const traditionalFoods = await getCollection('traditionalFoods');
+---
+
+<BaseLayout {pageTitle}>
+  <section class="bg-gradient-to-br from-cyan-50 to-blue-50 px-3 py-16">
+    <PageHeading>Kuliner Khas Pulau Tidung</PageHeading>
+    <PageSubHeading
+      >Rasakan cita rasa otentik hidangan lokal Pulau Tidung</PageSubHeading
+    >
+    <div class="max-w-4xl mx-auto">
+      <TraditionalFoodCollapsible
+        client:load
+        traditionalFoods={traditionalFoods}
+      />
+    </div>
+  </section>
+</BaseLayout>
