@@ -16,7 +16,7 @@ function Footer() {
               <h3 className="text-2xl font-[Karimun]">Visit Tidung</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              {currentYear} © KKN PPM UGM - Mendayung Seribu
+              {currentYear} © KKN PPM UGM - Mendayung Seribu 😍
             </p>
             <div className="flex space-x-4">
               <a
