@@ -1,5 +1,5 @@
 import { Heart } from 'lucide-react';
-import Logo from '@/assets/images/mendayung-seribu-logo.svg';
+import Logo from '@/assets/images/logo.png';
 import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
@@ -12,11 +12,11 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={Logo.src} alt="Logo Mendayung Seribu" className="w-8" />
+              <img src={Logo.src} alt="Logo Mendayung Seribu" className="w-8 h-8 object-contain" />
               <h3 className="text-2xl font-[Karimun]">Visit Tidung</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              {currentYear} © KKN PPM UGM - Mendayung Seribu 😍
+              {currentYear} © KKN PPM UGM - Mendayung Seribu
             </p>
             <div className="flex space-x-4">
               <a
