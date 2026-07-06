@@ -1,5 +1,6 @@
 ---
 import logo from '@/assets/images/logo.png';
+import logoText from '@/assets/images/visit-tidung-text.png';
 import MobileMenu from './MobileMenu';
 import Navigation from './Navigation';
 ---
@@ -11,10 +12,14 @@ import Navigation from './Navigation';
   <div class="flex justify-between items-center">
     {/* Logo */}
     <a href="/" class="flex items-center focus:outline-none">
-      <img src={logo.src} class="w-8 h-8 object-contain" />
-      <span class="text-3xl ml-3 font-[Karimun] text-primary-foreground" id="navbar-logo"
-        >Visit Tidung</span
-      >
+      <img src={logo.src} class="w-7 h-7 lg:w-8 lg:h-8 object-contain" />
+      <img
+        src={logoText.src}
+        alt="Visit Tidung"
+        class="h-6 lg:h-7 xl:h-8 ml-2 lg:ml-3 object-contain transition-all duration-300 text-primary-foreground"
+        id="navbar-logo"
+        style="filter: brightness(0) invert(1);"
+      />
     </a>
 
     <div class="flex gap-4 items-center">
@@ -42,6 +47,7 @@ import Navigation from './Navigation';
       navbar.classList.add(...navClasses);
       navbarLogo.classList.remove('text-primary-foreground');
       navbarLogo.classList.add('text-primary');
+      navbarLogo.style.filter = 'none';
       navLinks.forEach(link => {
         link.classList.remove('text-primary-foreground');
         link.classList.add('text-primary');
@@ -54,6 +60,7 @@ import Navigation from './Navigation';
       navbar.classList.remove(...navClasses);
       navbarLogo.classList.remove('text-primary');
       navbarLogo.classList.add('text-primary-foreground');
+      navbarLogo.style.filter = 'brightness(0) invert(1)';
       navLinks.forEach(link => {
         link.classList.remove('text-primary');
         link.classList.add('text-primary-foreground');

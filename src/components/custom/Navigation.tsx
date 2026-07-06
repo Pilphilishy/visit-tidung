@@ -48,7 +48,7 @@ function Navigation() {
               // scrollToSection(menu.scrollTarget!);
               setOpenDropdown(null);
             }}
-            className="navigation-menu-link py-3 px-4 text-2xl font-[Karimun] transition-colors duration-300 hover:text-accent focus:outline-none whitespace-nowrap"
+            className="navigation-menu-link py-3 px-2 xl:px-4 text-lg xl:text-2xl font-[Karimun] transition-colors duration-300 hover:text-accent focus:outline-none whitespace-nowrap"
           >
             {menu.title}
           </a>
