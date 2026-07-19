@@ -16,6 +16,7 @@ import {
   Phone,
   ScrollText,
   Users,
+  Navigation,
 } from 'lucide-react';
 
 type Props = {
@@ -144,6 +145,28 @@ export default function LodgingDetail({ lodging }: Props) {
           </p>
           <p className="text-sm text-gray-600">{lodging.data.phone ?? '-'}</p>
         </div>
+      </div>
+
+      {/* Google Maps & Routing Section */}
+      <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-2">
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${lodging.data.lat},${lodging.data.lng}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors shadow-sm"
+        >
+          <MapPin size={16} />
+          Buka di Google Maps
+        </a>
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${lodging.data.lat},${lodging.data.lng}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-sm"
+        >
+          <Navigation size={16} />
+          Petunjuk Rute (Navigasi)
+        </a>
       </div>
     </>
   );
