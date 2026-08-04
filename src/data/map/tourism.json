@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "name": "Dermaga Pulau Tidung Kecil",
+    "lat": -5.804023,
+    "lng": 106.521936,
+    "category": "Infrastruktur & Transportasi",
+    "description": "Dermaga penyeberangan dan akses utama kapal ke Pulau Tidung Kecil.",
+    "images": [
+      "../../assets/images/tourism/dermaga-pulau-tidung-kecil/dermaga-tidung-kecil-01.jpg",
+      "../../assets/images/tourism/dermaga-pulau-tidung-kecil/dermaga-tidung-kecil-02.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Minimarket Tidung Kecil (Jak Grosir)",
+    "lat": -5.80368,
+    "lng": 106.520915,
+    "category": "Fasilitas Publik & Belanja",
+    "description": "Fasilitas minimarket Jak Grosir untuk pemenuhan kebutuhan sembako dan logistik.",
+    "images": [
+      "../../assets/images/tourism/jak-grosir/jak-grosir-01.jpg",
+      "../../assets/images/tourism/jak-grosir/jak-grosir-02.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Musholla",
+    "lat": -5.803573,
+    "lng": 106.521404,
+    "category": "Fasilitas Peribadatan",
+    "description": "Fasilitas rumah ibadah musholla bagi pengujung dan pengelola.",
+    "images": [
+      "../../assets/images/tourism/musholla/musholla-01.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pusat Budidaya dan Konservasi Laut (PBKL)",
+    "lat": -5.803569,
+    "lng": 106.52169,
+    "category": "Konservasi & Edukasi",
+    "description": "Pusat kegiatan riset, budidaya laut, dan konservasi ekosistem bahari.",
+    "images": [
+      "../../assets/images/tourism/pbkl/pbkl-01.jpg",
+      "../../assets/images/tourism/pbkl/pbkl-02.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Museum Kerangka Paus",
+    "lat": -5.803749,
+    "lng": 106.522537,
+    "category": "Wisata Edukasi & Sejarah",
+    "description": "Museum pameran spesimen utuh kerangka paus sperma raksasa.",
+    "images": [
+      "../../assets/images/tourism/museum-kerangka-paus/museum-kerangka-paus-01.jpg",
+      "../../assets/images/tourism/museum-kerangka-paus/museum-kerangka-paus-02.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Pusat Karantina Penyu & Ruang Display Biota Laut",
+    "lat": -5.803522,
+    "lng": 106.522542,
+    "category": "Konservasi Biota Laut",
+    "description": "Fasilitas penangkaran penyu serta ruang pamer keanekaragaman biota laut.",
+    "images": [
+      "../../assets/images/tourism/pusat-karantina-penyu/pusat-karantina-penyu-01.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pusat Budidaya Ikan",
+    "lat": -5.80282,
+    "lng": 106.522579,
+    "category": "Budidaya & Agrowisata",
+    "description": "Area pembibitan dan pembesaran berbagai spesies ikan laut.",
+    "images": [
+      "../../assets/images/tourism/pusat-budidaya-ikan/pusat-budidaya-ikan-01.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Kebun Pembibitan Mangrove",
+    "lat": -5.803998,
+    "lng": 106.522429,
+    "category": "Ekowisata & Lingkungan",
+    "description": "Pusat persemaian bibit bakau/mangrove untuk penghijauan pesisir.",
+    "images": [
+      "../../assets/images/tourism/kebun-pembibitan-mangrove/kebun-pembibitan-mangrove-01.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Kebun Uban Farming",
+    "lat": -5.804121,
+    "lng": 106.523643,
+    "category": "Agrowisata",
+    "description": "Kawasan perkebunan pertanian pulau produktif (urban farming).",
+    "images": [
+      "../../assets/images/tourism/kebun-uban-farming/kebun-uban-farming-01.jpg",
+      "../../assets/images/tourism/kebun-uban-farming/kebun-uban-farming-02.jpg",
+      "../../assets/images/tourism/kebun-uban-farming/kebun-uban-farming-03.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Makam Panglima Hitam",
+    "lat": -5.803896,
+    "lng": 106.525776,
+    "category": "Wisata Sejarah & Budaya",
+    "description": "Situs cagar budaya makam bersejarah Panglima Hitam.",
+    "images": [
+      "../../assets/images/tourism/makam-panglima-hitam/makam-panglima-hitam-01.jpg",
+      "../../assets/images/tourism/makam-panglima-hitam/makam-panglima-hitam-02.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Camping Ground",
+    "lat": -5.802641,
+    "lng": 106.522378,
+    "category": "Wisata Perkemahan",
+    "description": "Lahan perkemahan alam pantai di Pulau Tidung Kecil.",
+    "images": [
+      "../../assets/images/tourism/camping-ground/camping-ground-01.jpg",
+      "../../assets/images/tourism/camping-ground/camping-ground-02.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Lokasi Penanaman Mangrove",
+    "lat": -5.802592,
+    "lng": 106.521414,
+    "category": "Ekowisata & Konservasi",
+    "description": "Zona pelestarian dan penanaman langsung bibit mangrove pesisir.",
+    "images": [
+      "../../assets/images/tourism/lokasi-penanaman-mangrove/lokasi-penanaman-mangrove-01.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Area Rekreasi",
+    "lat": -5.803015,
+    "lng": 106.517043,
+    "category": "Wisata Rekreasi",
+    "description": "Kawasan ruang terbuka hijau dan area rekreasi keluarga.",
+    "images": [
+      "../../assets/images/tourism/area-rekreasi/area-rekreasi-01.jpg"
+    ]
+  }
+]

@@ -12,6 +12,7 @@ const pageTitle = 'Peta Pulau Tidung';
 
 const culinary = await getCollection('culinary');
 const lodgings = await getCollection('lodgings');
+const tourism = await getCollection('tourism');
 
 // PETA
 import mapAdmin from '@/assets/images/maps/PETA PL TIDUNG 22 AGUSTUS 2025.jpg';
@@ -66,11 +67,11 @@ const posterImages = [
     <div class="text-center mb-16">
       <PageHeading>Peta Interaktif Pulau Tidung</PageHeading>
       <PageSubHeading>
-        Temukan lokasi kuliner UMKM dan penginapan di Pulau Tidung
+        Temukan lokasi wisata, kuliner UMKM, dan penginapan di Pulau Tidung
       </PageSubHeading>
     </div>
 
-    <Map client:only culinary={culinary} lodgings={lodgings} />
+    <Map client:only culinary={culinary} lodgings={lodgings} tourism={tourism} />
 
     {/* ====== GALERI PETA STATIS ====== */}
     <div class="max-w-6xl mx-auto mt-24">

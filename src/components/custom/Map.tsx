@@ -13,12 +13,14 @@ import { Icon } from 'leaflet';
 import CulinaryMarker from '@/assets/images/map-icons/culinary-marker.png';
 import LodgingMarker from '@/assets/images/map-icons/lodging-marker.png';
 import ActiveMarker from '@/assets/images/map-icons/active-marker.png';
+import TourismMarker from '@/assets/images/map-icons/tourism-marker.svg';
 import 'react-leaflet-markercluster/styles';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import L from 'leaflet';
 import { useEffect, useMemo, useState } from 'react';
 import CulinaryDetail from './CulinaryDetail';
 import LodgingDetail from './LodgingDetail';
+import TourismDetail from './TourismDetail';
 import {
   Drawer,
   DrawerClose,
@@ -32,9 +34,10 @@ import { Button } from '../ui/button';
 type Props = {
   culinary: CollectionEntry<'culinary'>[];
   lodgings: CollectionEntry<'lodgings'>[];
+  tourism?: CollectionEntry<'tourism'>[];
 };
 
-function Map({ culinary, lodgings }: Props) {
+function Map({ culinary, lodgings, tourism = [] }: Props) {
   const CulinaryIcon = useMemo(
     () =>
       new Icon({
@@ -55,6 +58,16 @@ function Map({ culinary, lodgings }: Props) {
     []
   );
 
+  const TourismIcon = useMemo(
+    () =>
+      new Icon({
+        iconUrl: TourismMarker.src,
+        iconSize: [44, 44],
+        iconAnchor: [22, 44],
+      }),
+    []
+  );
+
   const ActiveIcon = useMemo(
     () =>
       new Icon({
@@ -67,7 +80,7 @@ function Map({ culinary, lodgings }: Props) {
 
   // State
   const [selectedPlace, setSelectedPlace] = useState<null | CollectionEntry<
-    'culinary' | 'lodgings'
+    'culinary' | 'lodgings' | 'tourism'
   >>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [mapLoading, setMapLoading] = useState(true);
@@ -96,6 +109,14 @@ function Map({ culinary, lodgings }: Props) {
     });
   };
 
+  const createTourismClusterIcon = (cluster: any) => {
+    return L.divIcon({
+      html: `<div style="background-color:rgba(16,185,129,0.85);border-radius:50%;color:white;display:flex;align-items:center;justify-content:center;width:38px;height:38px;"><span style="font-size:14px;font-weight:bold;">${cluster.getChildCount()}</span></div>`,
+      className: 'tourism-cluster-icon',
+      iconSize: L.point(44, 44, true),
+    });
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
       {/* Sidebar */}
@@ -104,10 +125,13 @@ function Map({ culinary, lodgings }: Props) {
           selectedPlace.collection === 'culinary' ? (
             // Culinary
             <CulinaryDetail culinary={selectedPlace} />
-          ) : (
+          ) : selectedPlace.collection === 'lodgings' ? (
             // Lodging
             <LodgingDetail lodging={selectedPlace} />
-          )
+          ) : selectedPlace.collection === 'tourism' ? (
+            // Tourism
+            <TourismDetail tourism={selectedPlace} />
+          ) : null
         ) : (
           <div className="flex justify-center items-center h-full text-center text-gray-700">
             <p>Pilih tempat untuk melihat detailnya</p>
@@ -127,6 +151,8 @@ function Map({ culinary, lodgings }: Props) {
               <CulinaryDetail culinary={selectedPlace} />
             ) : selectedPlace?.collection === 'lodgings' ? (
               <LodgingDetail lodging={selectedPlace} />
+            ) : selectedPlace?.collection === 'tourism' ? (
+              <TourismDetail tourism={selectedPlace} />
             ) : null}
           </div>
           <DrawerClose asChild>
@@ -157,12 +183,45 @@ function Map({ culinary, lodgings }: Props) {
           />
 
           {/* Automatically fit to bounds */}
-          <FitBounds culinary={culinary} lodgings={lodgings} />
+          <FitBounds culinary={culinary} lodgings={lodgings} tourism={tourism} />
 
           {/* Center when marker clicked */}
           <MapController selectedPlace={selectedPlace} />
 
           <LayersControl position="topright">
+            <LayersControl.Overlay name="Lokasi Wisata" checked>
+              <LayerGroup>
+                <MarkerClusterGroup
+                  iconCreateFunction={createTourismClusterIcon}
+                  disableClusteringAtZoom={18}
+                  showCoverageOnHover={false}
+                  spiderfyOnMaxZoom={false}
+                >
+                  {tourism.map((place) => (
+                    <Marker
+                      key={`${place.data.id}`}
+                      position={[place.data.lat, place.data.lng]}
+                      icon={
+                        selectedPlace !== null &&
+                        selectedPlace.data.lat === place.data.lat &&
+                        selectedPlace.data.lng === place.data.lng
+                          ? ActiveIcon
+                          : TourismIcon
+                      }
+                      eventHandlers={{
+                        click: () => {
+                          setSelectedPlace(place);
+                          if (window.innerWidth < 768) {
+                            setDrawerOpen(true);
+                          }
+                        },
+                      }}
+                    ></Marker>
+                  ))}
+                </MarkerClusterGroup>
+              </LayerGroup>
+            </LayersControl.Overlay>
+
             <LayersControl.Overlay name="UMKM Kuliner" checked>
               <LayerGroup>
                 <MarkerClusterGroup
@@ -238,14 +297,16 @@ function Map({ culinary, lodgings }: Props) {
 function FitBounds({
   culinary,
   lodgings,
+  tourism = [],
 }: {
   culinary: CollectionEntry<'culinary'>[];
   lodgings: CollectionEntry<'lodgings'>[];
+  tourism?: CollectionEntry<'tourism'>[];
 }) {
   const map = useMap();
 
   useEffect(() => {
-    if (!culinary.length && !lodgings.length) return;
+    if (!culinary.length && !lodgings.length && !tourism.length) return;
 
     const bounds = L.latLngBounds([]);
 
@@ -257,10 +318,14 @@ function FitBounds({
       bounds.extend([place.data.lat, place.data.lng]);
     });
 
+    tourism.forEach((place) => {
+      bounds.extend([place.data.lat, place.data.lng]);
+    });
+
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [0, 0] }); // optional padding
     }
-  }, [culinary, lodgings, map]);
+  }, [culinary, lodgings, tourism, map]);
 
   return null; // This component doesn't render anything visible
 }
@@ -268,7 +333,7 @@ function FitBounds({
 function MapController({
   selectedPlace,
 }: {
-  selectedPlace: null | CollectionEntry<'culinary' | 'lodgings'>;
+  selectedPlace: null | CollectionEntry<'culinary' | 'lodgings' | 'tourism'>;
 }) {
   const map = useMap();
 
@@ -281,4 +346,4 @@ function MapController({
   return null;
 }
 
-export default Map;
+export default Map;

@@ -21,6 +21,8 @@ const badgeVariants = cva(
           "border-transparent bg-[#909ce1] text-white [a&]:hover:bg-[#909ce1]/90 focus-visible:ring-[#909ce1]/20 dark:focus-visible:ring-[#909ce1]/40 dark:bg-[#909ce1]/60",
         lightOrange:
           "border-transparent bg-[#ff9e67] text-white [a&]:hover:bg-[#ff9e67]/90 focus-visible:ring-[#ff9e67]/20 dark:focus-visible:ring-[#ff9e67]/40 dark:bg-[#ff9e67]/60",
+        lightGreen:
+          "border-transparent bg-[#10b981] text-white [a&]:hover:bg-[#10b981]/90 focus-visible:ring-[#10b981]/20 dark:focus-visible:ring-[#10b981]/40 dark:bg-[#10b981]/60",
       },
     },
     defaultVariants: {

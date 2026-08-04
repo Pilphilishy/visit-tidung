@@ -80,4 +80,19 @@ const traditionalFoods = defineCollection({
     }),
 });
 
-export const collections = { places, culinary, lodgings, traditionalFoods, articles };
+const tourism = defineCollection({
+  loader: file('src/data/map/tourism.json'),
+  schema: ({ image }) =>
+    z.object({
+      id: z.number(),
+      name: z.string(),
+      lat: z.number(),
+      lng: z.number(),
+      category: z.string().optional(),
+      description: z.string().optional(),
+      images: z.array(image()).optional(),
+    }),
+});
+
+export const collections = { places, culinary, lodgings, traditionalFoods, articles, tourism };
+
