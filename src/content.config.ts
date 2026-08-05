@@ -94,5 +94,16 @@ const tourism = defineCollection({
     }),
 });
 
-export const collections = { places, culinary, lodgings, traditionalFoods, articles, tourism };
+const amenities = defineCollection({
+  loader: file('src/data/map/amenities.json'),
+  schema: z.object({
+    id: z.number(),
+    name: z.string(),
+    lat: z.number(),
+    lng: z.number(),
+  }),
+});
+
+export const collections = { places, culinary, lodgings, traditionalFoods, articles, tourism, amenities };
+
 

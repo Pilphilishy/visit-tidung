@@ -613,19 +613,6 @@
     "products": [{ "id": 1, "name": "Nasi Uduk", "price": "10k" }]
   },
   {
-    "id": 25,
-    "name": "Warung Ibu Sopiyah",
-    "lat": -5.799287,
-    "lng": 106.499491,
-    "products": [
-      { "id": 1, "name": "Ikan Asin", "price": "10k" },
-      { "id": 2, "name": "Manisan Rumput Laut", "price": "10k" },
-      { "id": 3, "name": "Krupuk Ikan", "price": "10k" },
-      { "id": 4, "name": "Keripik Sukun", "price": "10k" },
-      { "id": 5, "name": "Dodol Rumput Laut", "price": "10k" }
-    ]
-  },
-  {
     "id": 26,
     "name": "Nasi Uduk Ibu Mulyadewi",
     "lat": -5.798803,

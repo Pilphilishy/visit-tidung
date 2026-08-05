@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "ATM Bank DKI",
+    "lat": -5.7988965,
+    "lng": 106.4992653
+  },
+  {
+    "id": 2,
+    "name": "ATM BNI",
+    "lat": -5.7992276,
+    "lng": 106.4993869
+  },
+  {
+    "id": 3,
+    "name": "Bike rental nuryani",
+    "lat": -5.79932,
+    "lng": 106.500114
+  },
+  {
+    "id": 4,
+    "name": "Kelurahan Pulau Tidung",
+    "lat": -5.7987837,
+    "lng": 106.4991507
+  },
+  {
+    "id": 5,
+    "name": "Konter Pembelian Tiket",
+    "lat": -5.7992696,
+    "lng": 106.4994719
+  },
+  {
+    "id": 6,
+    "name": "Pelabuhan Pulau Tidung",
+    "lat": -5.7993723,
+    "lng": 106.4996849
+  },
+  {
+    "id": 7,
+    "name": "Penjual Souvenir dan Baju",
+    "lat": -5.799605,
+    "lng": 106.500693
+  },
+  {
+    "id": 8,
+    "name": "Penyewaan Drone",
+    "lat": -5.799614,
+    "lng": 106.500859
+  },
+  {
+    "id": 9,
+    "name": "Penyewaan pak kidang",
+    "lat": -5.799614,
+    "lng": 106.500896
+  },
+  {
+    "id": 10,
+    "name": "Penyewaan Sepeda dan selis ibu Nur Yanah",
+    "lat": -5.799662,
+    "lng": 106.501064
+  },
+  {
+    "id": 11,
+    "name": "Penyewaan Sepeda Listrik Lauyuan",
+    "lat": -5.798983,
+    "lng": 106.498942
+  },
+  {
+    "id": 12,
+    "name": "Penyewaan Sepeda pak yono",
+    "lat": -5.799511,
+    "lng": 106.500688
+  },
+  {
+    "id": 13,
+    "name": "Polsek Pulau seribu selatan",
+    "lat": -5.8022089,
+    "lng": 106.5090987
+  },
+  {
+    "id": 14,
+    "name": "PUSKESMAS KECAMATAN KEPULAUAN SERIBU SELATAN",
+    "lat": -5.7992078,
+    "lng": 106.4998278
+  },
+  {
+    "id": 15,
+    "name": "Sepeda Listrik luyuan",
+    "lat": -5.800019,
+    "lng": 106.502149
+  },
+  {
+    "id": 16,
+    "name": "Sewa sepeda ibu ida",
+    "lat": -5.799181,
+    "lng": 106.500938
+  },
+  {
+    "id": 17,
+    "name": "Souvenir dan baju",
+    "lat": -5.80051,
+    "lng": 106.503502
+  },
+  {
+    "id": 18,
+    "name": "Taman dan Fasilitas Olahraga",
+    "lat": -5.802679,
+    "lng": 106.509344
+  },
+  {
+    "id": 19,
+    "name": "Tentengan Seribu",
+    "lat": -5.799202,
+    "lng": 106.499434
+  },
+  {
+    "id": 20,
+    "name": "Toko baju dan souvenir lampu delapan",
+    "lat": -5.798884,
+    "lng": 106.498236
+  },
+  {
+    "id": 21,
+    "name": "tourist information center",
+    "lat": -5.802662,
+    "lng": 106.510194
+  },
+  {
+    "id": 22,
+    "name": "Warung sopinyah oleh oleh khas tidung",
+    "lat": -5.799189,
+    "lng": 106.499522
+  }
+]

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <path d="M22 2C13.16 2 6 9.16 6 18c0 11.2 14.5 23.2 15.2 23.8.5.4 1.1.4 1.6 0C23.5 41.2 38 29.2 38 18 38 9.16 30.84 2 22 2z" fill="#8b5cf6" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="22" cy="17" r="10" fill="#ffffff"/>
+  <!-- Info icon -->
+  <path d="M22 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-1.5 4.5v7h3v-7h-3z" fill="#8b5cf6"/>
+</svg>
