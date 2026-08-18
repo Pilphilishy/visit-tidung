@@ -132,6 +132,16 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [mapLoading, setMapLoading] = useState(true);
 
+  const [overlappingPlaces, setOverlappingPlaces] = useState<
+    CollectionEntry<'culinary' | 'lodgings' | 'tourism' | 'amenities'>[]
+  >([]);
+  const [overlappingPopupPos, setOverlappingPopupPos] = useState<[number, number] | null>(null);
+
+  const allPlaces = useMemo(
+    () => [...tourism, ...culinary, ...lodgings, ...amenities],
+    [tourism, culinary, lodgings, amenities]
+  );
+
   // Auto-open drawer when place is selected on mobile & sync active category tab
   useEffect(() => {
     if (selectedPlace) {
@@ -147,6 +157,30 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
   ) => {
     setSelectedPlace(place);
     setActiveCategory(place.collection as any);
+  };
+
+  const handleMarkerClick = (
+    place: CollectionEntry<'culinary' | 'lodgings' | 'tourism' | 'amenities'>
+  ) => {
+    handleSelectPlace(place);
+
+    // Find all markers near this location (within ~35 meters radius)
+    const nearby = allPlaces.filter((p) => {
+      const dist = Math.hypot(p.data.lat - place.data.lat, p.data.lng - place.data.lng);
+      return dist < 0.00035;
+    });
+
+    if (nearby.length > 1) {
+      setOverlappingPlaces(nearby);
+      setOverlappingPopupPos([place.data.lat, place.data.lng]);
+    } else {
+      setOverlappingPlaces([]);
+      setOverlappingPopupPos(null);
+    }
+
+    if (window.innerWidth < 768) {
+      setDrawerOpen(true);
+    }
   };
 
   const sortGeographically = (
@@ -490,12 +524,20 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                   iconCreateFunction={createTourismClusterIcon}
                   disableClusteringAtZoom={18}
                   showCoverageOnHover={false}
-                  spiderfyOnMaxZoom={false}
+                  spiderfyOnMaxZoom={true}
                 >
                   {tourism.map((place) => (
                     <Marker
                       key={`${place.data.id}`}
                       position={[place.data.lat, place.data.lng]}
+                      riseOnHover={true}
+                      zIndexOffset={
+                        selectedPlace !== null &&
+                        selectedPlace.data.id === place.data.id &&
+                        selectedPlace.collection === place.collection
+                          ? 1000
+                          : 0
+                      }
                       icon={
                         selectedPlace !== null &&
                         selectedPlace.data.lat === place.data.lat &&
@@ -504,12 +546,7 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                           : TourismIcon
                       }
                       eventHandlers={{
-                        click: () => {
-                          handleSelectPlace(place);
-                          if (window.innerWidth < 768) {
-                            setDrawerOpen(true);
-                          }
-                        },
+                        click: () => handleMarkerClick(place),
                       }}
                     ></Marker>
                   ))}
@@ -523,12 +560,20 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                   iconCreateFunction={createCulinaryClusterIcon}
                   disableClusteringAtZoom={18}
                   showCoverageOnHover={false}
-                  spiderfyOnMaxZoom={false}
+                  spiderfyOnMaxZoom={true}
                 >
                   {culinary.map((place) => (
                     <Marker
                       key={`${place.data.id}`}
                       position={[place.data.lat, place.data.lng]}
+                      riseOnHover={true}
+                      zIndexOffset={
+                        selectedPlace !== null &&
+                        selectedPlace.data.id === place.data.id &&
+                        selectedPlace.collection === place.collection
+                          ? 1000
+                          : 0
+                      }
                       icon={
                         selectedPlace !== null &&
                         selectedPlace.data.lat === place.data.lat &&
@@ -537,12 +582,7 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                           : CulinaryIcon
                       }
                       eventHandlers={{
-                        click: () => {
-                          handleSelectPlace(place);
-                          if (window.innerWidth < 768) {
-                            setDrawerOpen(true);
-                          }
-                        },
+                        click: () => handleMarkerClick(place),
                       }}
                     ></Marker>
                   ))}
@@ -556,12 +596,20 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                   iconCreateFunction={createLodgingClusterIcon}
                   disableClusteringAtZoom={18}
                   showCoverageOnHover={false}
-                  spiderfyOnMaxZoom={false}
+                  spiderfyOnMaxZoom={true}
                 >
                   {lodgings.map((place) => (
                     <Marker
                       key={`${place.data.id}`}
                       position={[place.data.lat, place.data.lng]}
+                      riseOnHover={true}
+                      zIndexOffset={
+                        selectedPlace !== null &&
+                        selectedPlace.data.id === place.data.id &&
+                        selectedPlace.collection === place.collection
+                          ? 1000
+                          : 0
+                      }
                       icon={
                         selectedPlace !== null &&
                         selectedPlace.data.lat === place.data.lat &&
@@ -570,12 +618,7 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                           : LodgingIcon
                       }
                       eventHandlers={{
-                        click: () => {
-                          handleSelectPlace(place);
-                          if (window.innerWidth < 768) {
-                            setDrawerOpen(true);
-                          }
-                        },
+                        click: () => handleMarkerClick(place),
                       }}
                     ></Marker>
                   ))}
@@ -589,12 +632,20 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                   iconCreateFunction={createAmenitiesClusterIcon}
                   disableClusteringAtZoom={18}
                   showCoverageOnHover={false}
-                  spiderfyOnMaxZoom={false}
+                  spiderfyOnMaxZoom={true}
                 >
                   {amenities.map((place) => (
                     <Marker
                       key={`${place.data.id}`}
                       position={[place.data.lat, place.data.lng]}
+                      riseOnHover={true}
+                      zIndexOffset={
+                        selectedPlace !== null &&
+                        selectedPlace.data.id === place.data.id &&
+                        selectedPlace.collection === place.collection
+                          ? 1000
+                          : 0
+                      }
                       icon={
                         selectedPlace !== null &&
                         selectedPlace.data.lat === place.data.lat &&
@@ -603,12 +654,7 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
                           : AmenitiesIcon
                       }
                       eventHandlers={{
-                        click: () => {
-                          handleSelectPlace(place);
-                          if (window.innerWidth < 768) {
-                            setDrawerOpen(true);
-                          }
-                        },
+                        click: () => handleMarkerClick(place),
                       }}
                     ></Marker>
                   ))}
@@ -616,6 +662,74 @@ function Map({ culinary, lodgings, tourism = [], amenities = [] }: Props) {
               </LayerGroup>
             </LayersControl.Overlay>
           </LayersControl>
+
+          {/* Popup Pemilih Titik Bertumpuk */}
+          {overlappingPopupPos && overlappingPlaces.length > 1 && (
+            <Popup
+              position={overlappingPopupPos}
+              eventHandlers={{
+                remove: () => {
+                  setOverlappingPlaces([]);
+                  setOverlappingPopupPos(null);
+                },
+              }}
+            >
+              <div className="p-1 min-w-[210px] max-w-[260px]">
+                <div className="text-[11px] font-bold text-slate-800 border-b border-slate-200 pb-1 mb-1.5 flex items-center justify-between">
+                  <span>📍 {overlappingPlaces.length} Titik di Lokasi ini</span>
+                  <span className="text-[9px] text-slate-500 font-normal">Pilih lokasi</span>
+                </div>
+                <div className="space-y-1 max-h-[160px] overflow-y-auto pr-0.5">
+                  {overlappingPlaces.map((item) => {
+                    const isSel =
+                      selectedPlace?.data.id === item.data.id &&
+                      selectedPlace?.collection === item.collection;
+                    const categoryLabel =
+                      item.collection === 'culinary'
+                        ? 'Kuliner'
+                        : item.collection === 'lodgings'
+                        ? 'Penginapan'
+                        : item.collection === 'tourism'
+                        ? 'Wisata'
+                        : 'Amenitas';
+                    const categoryColor =
+                      item.collection === 'culinary'
+                        ? 'bg-amber-100 text-amber-800 border-amber-300'
+                        : item.collection === 'lodgings'
+                        ? 'bg-blue-100 text-blue-800 border-blue-300'
+                        : item.collection === 'tourism'
+                        ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
+                        : 'bg-purple-100 text-purple-800 border-purple-300';
+
+                    return (
+                      <button
+                        key={`${item.collection}-${item.data.id}`}
+                        type="button"
+                        onClick={() => {
+                          handleSelectPlace(item);
+                          if (window.innerWidth < 768) {
+                            setDrawerOpen(true);
+                          }
+                        }}
+                        className={`w-full text-left p-1.5 rounded text-xs transition-all flex items-center justify-between border cursor-pointer ${
+                          isSel
+                            ? 'bg-purple-50 border-purple-500 font-semibold ring-1 ring-purple-400 text-purple-900'
+                            : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'
+                        }`}
+                      >
+                        <span className="truncate text-[11px] font-medium pr-1">
+                          {item.data.name}
+                        </span>
+                        <span className={`text-[9px] px-1.5 py-0.5 rounded border font-semibold shrink-0 ${categoryColor}`}>
+                          {categoryLabel}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </Popup>
+          )}
         </MapContainer>
       </div>
     </div>
